@@ -1,0 +1,34 @@
+.features-img{
+  display: flex;
+  margin-top: 100px;
+
+  & img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__large{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px){
+  .features-img{
+
+    &__boy-img{
+      width: 277px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .features-img{
+    flex-direction: column;
+    margin-top: 88px;
+
+    & img{
+      width: 100%;
+    }
+  }
+}

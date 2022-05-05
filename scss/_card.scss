@@ -1,0 +1,123 @@
+.main-section__sale{
+  position: relative;
+}
+.sale-wrapper{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  
+  &__content{
+    width: 377px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #000;
+  }
+  
+  &__header{
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__header-close{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & button{
+      order:2;
+    }
+  }
+  
+  &__close-card{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  &__img-wrapper{
+    padding: 12px 13px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  &__model-name{
+    font-size: 15px;
+    line-height: 25px;
+  }
+  
+  &__num{
+    font-size: 14px;
+    line-height: 25px;
+  }
+  
+  &__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item:nth-child(2){
+    background-color: #F1F1F1;
+    padding: 7px 11px;
+    color: #000;
+    width: 96px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__plus, .sale-wrapper__minus{
+    width: 16px;
+    height: 18px;
+    border: none;
+  }
+}
+
+.open-card{
+  display: block;
+}
+
+.xx-99-headphone-sell__link{
+  border: none;
+}
+
+@media (max-width: 376px){
+  .sale-wrapper{
+    top: 420px;
+    
+    &__list{
+      flex-direction: column;
+    }
+    &__content{
+      padding: 20px;
+      width: 100%;
+    }
+
+    &__list{
+      padding: 0;
+      padding-bottom: 10px;
+    }
+
+    &__item:nth-child(2){
+      width: 175px;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.banner-section{
+  background-color: #000;
+  height: 630px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/header-banner.png);
+  
+  &__wrapper{
+    width: 380px;
+    padding-top: 128px;
+    padding-bottom: 158px;
+  }
+  
+  &__title{
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  
+  &__header {
+    padding: 24px 0;
+  }
+  
+  &__text{
+    font-weight: 500;
+    opacity: 0.75;
+    padding-bottom: 40px;
+  }
+  
+  &__link{
+    @extend %button-style;
+    background-color: #D87D4A;
+    display: inline-block;
+    transition: background-color .3s ease;
+    
+    &:hover{
+      background-color: #FBAF85;
+      transition: background-color .3s ease;
+    }
+  }
+} // banner-header
+
+// MEDIA SECTION
+
+@media (max-width: 768px){
+  .banner-section{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image:url(../img/tablet-banner.png);
+    
+    &__wrapper{
+      margin: 0 auto;
+      padding-top: 216px;
+      padding-bottom: 167px;
+      text-align: center;
+    }
+  } //banner-section
+} // media queries
+
+@media(max-width: 376px) {
+  .banner-section{
+    &__wrapper{
+      padding-top: 100px;
+      padding-bottom: 112px;
+      width: 325px;
+    }
+    &__title{
+      font-size: 14px;
+      line-height: 19px;
+    }
+    
+    &__header{
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}

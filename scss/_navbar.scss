@@ -1,0 +1,143 @@
+.header{
+  
+  &__burger-button{
+    display: none;
+  }
+  
+  &__nav{
+    background-color: #000;
+  }
+  
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #fff;
+  }
+  
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 427px;
+  }
+  
+  &__link{ 
+    position: relative;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: .3s ease;
+    
+    &::before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      background-color:#d87d4a;
+      transition: .3s ease;
+    }
+    
+    &:hover::before{
+      content: "";
+      border-bottom: 1px solid #d87d4a;
+      width: 100%;
+      left: 0;
+      right: auto;
+      transition: .3s ease;
+    }
+    
+    &:hover{
+      color: #d87d4a;
+      transition: .3s ease;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body{
+    padding-top: 97px;
+  }
+  .header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    
+    &__wrapper{
+      padding: 32px 0;
+    }
+    
+    &__burger-button{
+      display: block;
+      order: -1;
+      background-color: transparent;
+      border: none;
+    }
+    
+    &__list{
+      display: none;
+      align-items: stretch;
+      flex-direction: column;
+      margin-top: 97px;
+      text-align: center;
+      padding-top: 30px;
+      box-shadow: 10px 0 20px rgba(0, 0, 0, .9px);
+      animation: close-burger-menu .3s ease 1 forwards;
+    }
+    
+    &__item:not(:last-child){
+      margin-bottom: 20px;
+    }
+    
+    &__burger-button{
+      z-index: 20;
+    }
+  } // header
+} // media
+
+.open-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 35%;
+  background-color: #000;
+  display: block;
+  animation: open-burger-animation .3s ease 1 forwards;
+}
+
+@media (max-width: 376px){
+  .open-menu{
+    width: 65%;
+    box-shadow: 150px 0 0px rgba(0, 0, 0, .9px);
+  }
+}
+
+@keyframes open-burger-animation{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0)
+  }
+}
+
+@keyframes close-burger-menu {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%)
+  }
+}

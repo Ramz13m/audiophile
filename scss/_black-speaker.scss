@@ -1,0 +1,58 @@
+.black-speaker{
+  background: url(../img/zx-7-banner.png) right no-repeat fixed;
+  background-size: cover;
+  height: 320px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 44px;
+  
+  &__text-content{
+    padding: 101px 0 101px 95px;
+  }
+  
+  &__header{
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  
+  &__link{
+    @extend %button-style;
+    border: 1px solid #000;
+    display: inline-block;
+    transition: background-color .3s ease;
+    
+    &:hover{
+      background-color: #000;
+      transition: background-color .3s ease;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .black-speaker{
+    margin-top: 32px;
+    background: url(../img/zx-7-tablet-banner.png) right no-repeat fixed;
+    background-size: cover;
+    
+    &__text-content{
+      padding: 101px 0 101px 62px;
+    }
+    
+    &__header{
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+@media (max-width: 376px){
+  .black-speaker{
+    background-position: 60%;
+    
+    &__text-content{
+      padding: 101px 0 101px 24px;
+    }
+  }
+}

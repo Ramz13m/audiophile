@@ -1,0 +1,352 @@
+// time modal 
+
+.modal-section{
+  background-color: rgba(27, 27, 27, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  display: none;
+
+
+  &__modal-wrapper{
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px; 
+    background-color: #333;
+  }
+
+  &__close-modal-button{
+    color: #fff;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__header, .modal-section__clear{
+    text-align: center;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  &__text{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  &__sale-button{
+    @extend %button-style;
+    background-color: #D87D4A;
+    outline: none;
+    border: none; 
+    margin-top: 20px;
+  }
+}
+
+
+.group{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.group p{
+  display: inline-block;
+}
+
+.headphone-section-header{
+  text-transform: uppercase;
+  text-align: center;
+  padding: 98px 0;
+  background-color: #000;
+  
+  &__link{
+    color: #fff;
+  }
+}
+.xx-99-headphone, .xx-99-headphone-sell{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+  &__img-wrapper{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 65px 95px 108px 95px;
+  }
+  
+  &__text-content{
+    width: 445px;
+    color: #fff;
+  }
+  
+  &__title{
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #D87D4A;
+    margin-bottom: 16px;
+  }
+  
+  &__header{
+    color: #fff;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  &__text{
+    opacity: .5;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+  
+  &__link{
+    @extend %button-style;
+    display: inline-block;
+    color: #fff;
+    background-color:#D87D4A;
+    transition: background-color .3s ease;
+    
+    &:hover{
+      background-color: #FBAF85;
+      transition: background-color .3s ease;
+    }
+  }
+}
+
+// sell section 
+
+.xx-99-headphone-sell{
+  margin-top: 100px;
+
+  &__money{
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 32px;
+    padding-bottom: 47px;
+  }
+  
+  &__form{
+    color: #000;
+    display: flex;
+  }
+  
+  &__num-wrapper{
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;
+  }
+  
+  &__minus, .xx-99-headphone-sell__plus{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  &__value{
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+// CARD SECTION
+
+
+// mark 1 section
+.xx-99-headphone-mark-I{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+  &__img-wrapper{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 66px 122px 109px 121px;
+  }
+  
+  &__text-content{
+    width: 445px;
+    color: #fff;
+  }
+  
+  &__header{
+    color: #fff;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  &__text{
+    opacity: .5;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+  
+  &__link{
+    @extend %button-style;
+    color: #fff;
+    background-color:#D87D4A;
+    transition: background-color .3s ease;
+    
+    &:hover{
+      background-color: #FBAF85;
+      transition: background-color .3s ease;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .xx-99-headphone{
+    flex-direction: column;
+    margin-top: 120px;
+    
+    &__img-wrapper{
+      width: 100%;
+      padding-top: 41px;
+      padding-bottom: 68px;
+      margin-bottom: 52px;
+    }
+    
+    &__text{
+      margin-bottom: 24px;
+    }
+    
+    &-sell{
+      justify-content: space-between;
+      margin-bottom: 160px;
+      
+      &__text-content{
+        width: 425px;
+      }
+      
+      &__header{
+        font-size: 28px;
+        line-height: 32px;
+      }
+      
+      &__text{
+        font-size: 15px;
+        line-height: 25px;
+      }
+      
+      &__img-wrapper{
+        padding: 133px 50px;
+        margin-right: 20px;
+        margin-top: 82px;
+      }
+      
+      &__num-wrapper{
+        margin: 0 auto;
+      }
+      
+      &__money{
+        padding-top: 0;
+      }
+    }
+  }
+  .xx-99-headphone-mark-I{
+    flex-direction: column;
+    margin-top: 120px;
+    text-align: center;
+    
+    &__img-wrapper{
+      order: -1;
+      width: 100%;
+      padding: 0;
+      padding-top: 41px;
+      padding-bottom: 86px;
+      text-align: center;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+
+@media (max-width: 376px){
+  .headphone-section-header{
+    padding: 32px 0;
+    
+    &__link{
+      font-size: 28px;
+      line-height: 38px
+    }
+  }
+  
+  .xx-99-headphone{
+    margin-top: 64px;
+    
+    &__img-wrapper{
+      padding: 41px 53px 68px 53px;
+    }
+    
+    &__text-content{
+      width: 100%;
+    }
+    
+    &__header{
+      font-size: 28px;
+      line-height: 38px;
+    }
+    
+    &__text{
+      font-size: 15px;
+      line-height: 25px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &-sell{
+      flex-direction: column;
+
+      &__img-wrapper{
+        padding: 56px 73px;
+        margin-right: 0;
+        margin-top: 65px;
+      }
+
+      &__text-content{
+        width: 100%;
+        text-align: center;
+        margin-top: 32px;
+      }
+    }
+  }
+  
+  .xx-99-headphone-mark-I{
+    &__img-wrapper{
+      padding: 41px 76px 86px 76px;
+    }
+    
+    &__text-content{
+      width: 100%;
+    }
+    
+    &__header{
+      font-size: 28px;
+      line-height: 38px;
+    }
+    
+    &__text{
+      margin-bottom: 24px;
+    }
+  }
+}
